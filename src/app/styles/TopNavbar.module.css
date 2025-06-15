@@ -1,0 +1,70 @@
+.topNavbar {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: space-between; /* Ensures items are spaced out */
+  align-items: center;
+  font-size: 0.875rem;
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+
+.workingHours {
+  /* Flex item, will be on the left */
+  margin-right: auto; /* Pushes other items to the right */
+}
+
+.contactInfo {
+  /* Flex item, will be in the center */
+  /* margin: 0 auto; /* Centers the item if space allows */
+  /* Forcing center by specific flex properties if needed, or rely on space-between */
+}
+
+.socialIcons {
+  /* Flex item, will be on the right */
+  margin-left: auto; /* Pushes itself to the right */
+  display: flex; /* To align icons horizontally */
+  gap: 0.75rem; /* Space between icons */
+}
+
+.contactInfo a,
+.workingHours p {
+  color: var(--text-light);
+  text-decoration: none;
+  margin: 0 0.5rem;
+}
+
+.contactInfo a:hover {
+  text-decoration: underline;
+}
+
+.socialIcons a {
+  color: var(--text-light);
+  /* margin-left removed as gap is used in .socialIcons */
+  transition: color 0.3s ease;
+}
+
+.socialIcons a:hover {
+  color: var(--secondary-color); /* Using secondary color for hover */
+}
+
+/* Mobil görünümler için */
+@media (max-width: 768px) {
+  .topNavbar {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items when stacked */
+    gap: 0.5rem; /* Add some space between stacked items */
+  }
+
+  .workingHours,
+  .contactInfo,
+  .socialIcons {
+    margin-right: 0; /* Reset margins for stacked layout */
+    margin-left: 0;
+    text-align: center; /* Center text content */
+  }
+
+  .socialIcons {
+    justify-content: center; /* Center social icons */
+  }
+}

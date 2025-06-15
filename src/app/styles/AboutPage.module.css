@@ -1,0 +1,186 @@
+.aboutPage {
+  padding: 40px 20px;
+  background-color: var(--default-background-color);
+}
+
+.pageHeader {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.pageTitle {
+  font-size: 3em;
+  color: var(--text-dark);
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.pageSubtitle {
+  font-size: 1.5em;
+  color: var(--text-dark);
+  margin-bottom: 30px;
+}
+
+.contentGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.textContent {
+  line-height: 1.8;
+  font-size: 1.1em;
+  color: var(--text-dark);
+}
+
+.textContent h2 {
+  font-size: 2em;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.textContent p {
+  margin-bottom: 20px;
+}
+
+.imageContainer {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.aboutImage {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.missionVision {
+  margin-top: 40px;
+  background-color: var(--background-light);
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.missionVision h3 {
+  font-size: 1.8em;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.missionVision p {
+  font-size: 1.05em;
+  color: var(--text-dark);
+  line-height: 1.7;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  .contentGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px;
+  }
+
+  .pageTitle {
+    font-size: 3.5em;
+  }
+
+  .pageSubtitle {
+    font-size: 1.8em;
+  }
+
+  .textContent h2 {
+    font-size: 2.2em;
+  }
+}
+
+@media (min-width: 1024px) {
+  .aboutPage {
+    padding: 60px 20px;
+  }
+
+  .pageTitle {
+    font-size: 4em;
+  }
+}
+
+/* Revamped Values Section Styles */
+.valuesSectionRevamped {
+  margin-top: 50px;
+  padding: 40px 20px;
+  background-color: var(--background-light); /* White background for this section */
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.07);
+}
+
+.valuesSectionTitleCentered {
+  text-align: center;
+  font-size: 2.5em; /* Adjusted size */
+  color: var(--primary-color); /* Consistent with other titles */
+  margin-bottom: 40px; /* Increased space below title */
+  font-weight: bold;
+}
+
+.coreValuesContainer {
+  display: flex;
+  justify-content: space-around; /* Distribute items evenly */
+  align-items: flex-start; /* Align items to the top */
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  gap: 30px; /* Space between value items */
+}
+
+.coreValueItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 200px; /* Fixed width for each item, adjust as needed */
+}
+
+.coreValueIconContainer {
+  margin-bottom: 15px; /* Space between icon and name */
+  color: var(--secondary-color); /* Icon color, can be customized per icon if needed */
+}
+
+.coreValueName {
+  font-size: 1.4em; /* Adjusted size */
+  color: var(--text-dark);
+  font-weight: 600; /* Slightly bolder */
+  margin-bottom: 5px; /* Space below name if description were present */
+}
+
+/* Optional: Styles for description if added back */
+.coreValueDescription {
+  font-size: 0.95em;
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+/* Responsive adjustments for core values */
+@media (max-width: 992px) { /* Adjust breakpoint as needed */
+  .coreValuesContainer {
+    justify-content: center; /* Center items when they start to wrap */
+  }
+  .coreValueItem {
+    width: calc(50% - 20px); /* Two items per row on medium screens */
+  }
+}
+
+@media (max-width: 576px) { /* Adjust breakpoint for smaller screens */
+  .coreValueItem {
+    width: 100%; /* One item per row on small screens */
+  }
+  .valuesSectionTitleCentered {
+    font-size: 2em;
+  }
+  .coreValueName {
+    font-size: 1.2em;
+  }
+}

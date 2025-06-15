@@ -1,0 +1,141 @@
+.orderPage {
+  padding: 40px 20px;
+  background-color: var(--accent-color-2); /* Soft cream background */
+}
+
+.pageHeader {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.pageTitle {
+  font-size: 3em;
+  color: var(--primary-color); /* SaddleBrown */
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.pageSubtitle {
+  font-size: 1.5em;
+  color: var(--secondary-color); /* Sienna */
+  margin-bottom: 30px;
+}
+
+.platformsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.platformCard {
+  background-color: var(--background-light);
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  text-align: center;
+  width: 280px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
+  color: inherit;
+}
+
+.platformCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.platformLogoContainer {
+  margin-bottom: 20px;
+  height: 80px; /* Fixed height for logos */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.platformLogo {
+  max-height: 100%;
+  max-width: 180px;
+  object-fit: contain;
+}
+
+.platformName {
+  font-size: 1.8em;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.platformDescription {
+  font-size: 1em;
+  color: var(--text-dark);
+  margin-bottom: 20px;
+  min-height: 60px; /* Ensure consistent height */
+}
+
+.orderButton {
+  background-color: var(--primary-color); /* Pomegranate */
+  color: var(--text-light);
+  padding: 12px 25px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1.1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.orderButton:hover {
+  background-color: var(--secondary-color); /* Darker Pomegranate */
+  transform: scale(1.05);
+}
+
+.orderButton svg {
+  margin-left: 8px;
+}
+
+.infoBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .pageTitle {
+    font-size: 2.5em;
+  }
+
+  .pageSubtitle {
+    font-size: 1.3em;
+  }
+
+  .platformCard {
+    width: 100%;
+    max-width: 320px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pageTitle {
+    font-size: 2em;
+  }
+
+  .pageSubtitle {
+    font-size: 1.1em;
+  }
+
+  .platformName {
+    font-size: 1.5em;
+  }
+
+  .orderButton {
+    font-size: 1em;
+    padding: 10px 20px;
+  }
+}

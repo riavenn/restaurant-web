@@ -1,0 +1,115 @@
+.navbar {
+  background-color: var(--background-light);
+  padding: 1rem 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* display: flex; /* Moved to navContainer */
+  /* justify-content: space-between; /* Moved to navContainer */
+  /* align-items: center; /* Moved to navContainer */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: top 0.3s;
+}
+
+.navContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%; /* Ensure it takes full width for proper spacing */
+}
+
+.logoContainer {
+  /* Logo için özel stiller eklenebilir */
+}
+
+.logo {
+  height: 60px; /* Örnek logo yüksekliği */
+  width: auto;
+  display: block; /* Prevents extra space below image if it's inline */
+}
+
+.navLinks {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navLinks li {
+  margin-left: 1.5rem;
+}
+
+.navLinks a {
+  text-decoration: none;
+  color: var(--text-dark);
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navLinks a:hover,
+.navLinks a.active {
+  color: var(--secondary-color);
+}
+
+.mobileMenuIcon {
+  display: none; /* Varsayılan olarak gizli */
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: var(--text-dark);
+}
+
+.mobileNavLinks {
+  display: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 100%; /* Navbar'ın hemen altına */
+  left: 0;
+  right: 0;
+  background-color: var(--background-light);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.mobileNavLinks.open {
+  display: flex;
+}
+
+.mobileNavLinks li {
+  margin: 0.75rem 0;
+}
+
+.mobileNavLinks a {
+  text-decoration: none;
+  color: var(--text-dark);
+  font-weight: 500;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.mobileNavLinks a:hover,
+.mobileNavLinks a.active {
+  color: var(--secondary-color);
+}
+
+/* Mobil görünümler için */
+@media (max-width: 768px) {
+  .navContainer {
+    /* On mobile, logo and menu icon are the primary flex items */
+  }
+  .navLinks {
+    display: none; /* Masaüstü linklerini gizle */
+  }
+  .mobileMenuIcon {
+    display: block; /* Hamburger ikonunu göster */
+    margin-left: auto; /* Push mobile menu icon to the right if logo is present */
+  }
+  .logoContainer {
+    /* Ensure logo doesn't take up too much space, allowing menu icon to be visible */
+    flex-shrink: 0;
+  }
+}

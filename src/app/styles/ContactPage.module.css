@@ -1,0 +1,133 @@
+.contactPage {
+  padding: 40px 20px;
+  background-color: var(--default-background-color);
+}
+
+.pageHeader {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.pageTitle {
+  font-size: 3em;
+  color: var(--text-dark);
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.pageSubtitle {
+  font-size: 1.5em;
+  color: var(--text-dark);
+  margin-bottom: 30px;
+}
+
+.contentWrapper {
+  display: flex; /* Changed to flex */
+  flex-direction: column; /* Default to column for smaller screens */
+  gap: 40px;
+}
+
+.contactFormContainer {
+  background-color: var(--background-light);
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.contactFormContainer h2 {
+  font-size: 2em;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.formGroup {
+  margin-top: 1rem; /* Added top margin */
+  margin-bottom: 1rem; /* Standardized bottom margin */
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: var(--text-dark);
+}
+
+.formGroup input,
+.formGroup textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--accent-color-1);
+  border-radius: var(--border-radius);
+  font-size: 1em;
+  box-sizing: border-box;
+  /* height for textarea is set below, input will be default */
+}
+
+.formGroup textarea {
+  height: 150px; /* Consistent, predefined height */
+  resize: none; /* Not user-resizable */
+}
+
+
+
+.submitButton {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  padding: 12px 25px;
+  border: none;
+  border-radius: var(--border-radius);
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submitButton:hover {
+  background-color: var(--secondary-color);
+}
+
+
+
+.mapContainer {
+  margin-top: 40px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  height: 400px; /* Default height */
+  width: 100%; /* Ensure map takes full width of its container */
+}
+
+.mapFrame {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  .pageTitle {
+    font-size: 3.5em;
+  }
+
+  .pageSubtitle {
+    font-size: 1.8em;
+  }
+
+  .contactFormContainer h2 {
+    font-size: 2.2em;
+  }
+}
+
+@media (min-width: 1024px) {
+  .contactPage {
+    padding: 60px 20px;
+  }
+
+  .pageTitle {
+    font-size: 4em;
+  }
+
+  .mapContainer {
+    height: 450px; /* Larger height for larger screens */
+  }
+}

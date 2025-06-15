@@ -1,0 +1,69 @@
+.homePage {
+  padding: 2rem 0;
+  background-color: var(--default-background-color);
+}
+
+.welcomeSection {
+  text-align: center;
+  padding: 3rem 1rem;
+  margin-bottom: 2rem;
+  background-color: var(--background-light);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.welcomeTitle {
+  font-size: 2.8rem;
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.welcomeDescription {
+  font-size: 1.15rem;
+  color: var(--text-dark);
+  max-width: 700px;
+  margin: 0 auto 2rem auto;
+  line-height: 1.7;
+}
+
+.menuButton {
+  display: inline-block;
+  background-color: var(--secondary-color);
+  color: var(--text-light);
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: var(--border-radius);
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.menuButton:hover {
+  background-color: var(--primary-color);
+  transform: translateY(-2px);
+}
+
+/* Gelecekteki bölümler için placeholder */
+.futureSection {
+  padding: 2rem 1rem;
+  text-align: center;
+  color: var(--text-dark);
+  font-style: italic;
+}
+
+/* Mobil görünümler için */
+@media (max-width: 768px) {
+  .welcomeTitle {
+    font-size: 2.2rem;
+  }
+  .welcomeDescription {
+    font-size: 1rem;
+  }
+  .menuButton {
+    padding: 0.7rem 1.5rem;
+    font-size: 1.1rem;
+  }
+}
