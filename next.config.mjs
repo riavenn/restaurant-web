@@ -11,9 +11,12 @@ const nextConfig = {
     unoptimized: true,
   },
 
-  // Sitenizin adresi 'https://riavenn.github.io/restaurant-web/' olduğu için,
+  // Sitenizin GitHub Pages adresi 'https://riavenn.github.io/restaurant-web/' olduğu için,
   // 'basePath' ve 'assetPrefix' ayarlarını depo adınızla ('restaurant-web') eşleşecek şekilde
   // aşağıdaki gibi etkinleştirmeniz GEREKLİDİR.
+  // Bu ayarlar, projenizdeki tüm URL'lerin ve varlıkların doğru şekilde yüklenmesini sağlar.
+  basePath: "/restaurant-web",
+  assetPrefix: "/restaurant-web/",
 };
 
 // Next.js'in .mjs uzantılı yapılandırma dosyalarını okuyabilmesi için
