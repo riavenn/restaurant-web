@@ -4,19 +4,9 @@ const nextConfig = {
   // projenizin 'out' klasörüne çıkarmasını sağlar. GitHub Pages sadece statik dosyaları barındırabilir.
   output: "export",
 
-  // GitHub Pages gibi statik barındırma ortamlarında Next.js'in yerleşik görüntü optimizasyonu çalışmaz.
-  // Bu ayar, Next.js'in görüntüleri optimize etmeye çalışmasını engeller,
-  // böylece sitenizdeki resimler düzgün şekilde yüklenir.
-  images: {
-    unoptimized: true,
-  },
-
-  // Sitenizin GitHub Pages adresi 'https://riavenn.github.io/restaurant-web/' olduğu için,
-  // 'basePath' ve 'assetPrefix' ayarlarını depo adınızla ('restaurant-web') eşleşecek şekilde
-  // aşağıdaki gibi etkinleştirmeniz GEREKLİDİR.
-  // Bu ayarlar, projenizdeki tüm URL'lerin ve varlıkların doğru şekilde yüklenmesini sağlar.
-  basePath: "/restaurant-web",
-  assetPrefix: "/restaurant-web/",
+  // 'actions/configure-pages@v5' GitHub Action'ı bu ayarları otomatik olarak yönettiği için
+  // 'images' ve 'basePath' / 'assetPrefix' ayarlarını buradan kaldırdık.
+  // Bu, çakışmaları önler ve Action'ın otomatik yapılandırmasının sorunsuz çalışmasını sağlar.
 };
 
 // Next.js'in .mjs uzantılı yapılandırma dosyalarını okuyabilmesi için
