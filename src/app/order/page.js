@@ -87,15 +87,7 @@ export default function OrderPage() {
                 width={180}
                 height={60}
                 className={styles.platformLogo}
-              />
-              <span
-                style={{
-                  fontSize: "2em",
-                  fontWeight: "bold",
-                  color: "#5d3ebc",
-                }}>
-                GetirYemek
-              </span>{" "}
+              />{" "}
               {/* Placeholder if no logo */}
             </div>
             <h2 className={styles.platformName}>GetirYemek</h2>
