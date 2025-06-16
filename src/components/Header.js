@@ -2,15 +2,34 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from '../app/styles/Header.module.css';
+import { useState, useEffect } from 'react';
 import { FaArrowDown } from 'react-icons/fa'; // Example arrow icon
 
 export default function Header() {
+  const [showArrow, setShowArrow] = useState(true);
+
   const scrollToFooter = () => {
-    const footerElement = document.getElementById('site-footer'); // Assuming footer has id 'site-footer'
+    const footerElement = document.getElementById('site-footer');
     if (footerElement) {
       footerElement.scrollIntoView({ behavior: 'smooth' });
+      setShowArrow(false); // Hide arrow after click
     }
   };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY === 0) {
+        setShowArrow(true); // Show arrow if scrolled to top
+      } else {
+        setShowArrow(false); // Hide arrow if not at top
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   return (
     <header className={styles.header}>
@@ -35,9 +54,11 @@ export default function Header() {
           Menüye Göz At
         </Link>
       </div>
-      <div className={styles.scrollDownArrow} onClick={scrollToFooter} title="Aşağı Kaydır">
-        <FaArrowDown size={40} />
-      </div>
+      {showArrow && (
+        <div className={styles.scrollDownArrow} onClick={scrollToFooter} title="Aşağı Kaydır">
+          <FaArrowDown size={40} />
+        </div>
+      )}
     </header>
   );
 }

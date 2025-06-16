@@ -1,7 +1,7 @@
 // src/app/order/page.js
 import Link from "next/link";
 import Image from "next/image";
-import { FaPhone, FaMotorcycle, FaExternalLinkAlt } from "react-icons/fa";
+
 import styles from "../styles/OrderPage.module.css";
 
 export default function OrderPage() {
@@ -9,7 +9,7 @@ export default function OrderPage() {
     <div className={styles.orderPage}>
       <div className="container">
         <header className={styles.pageHeader}>
-          <FaMotorcycle className={styles.motorcycleIcon} size={80} />
+          <Image src="/motorcycle-icon.svg" alt="Motorcycle Icon" width={80} height={80} className={styles.platformLogo} />
           <h1 className={styles.pageTitle}>Hemen Sipariş Verin!</h1>
           <p className={styles.pageSubtitle}>
             Enfes lezzetlerimizi kapınıza kadar getirelim! Aşağıdaki kolay ve
@@ -21,7 +21,7 @@ export default function OrderPage() {
           {/* Telefonla Sipariş Kartı */}
           <div className={styles.platformCard}>
             <div className={styles.platformLogoContainer}>
-              <FaPhone size={56} style={{ color: "#2ecc71" }} />{" "}
+              <Image src="/phone-icon.svg" alt="Phone Icon" width={80} height={80} style={{ color: "#2ecc71" }} className={styles.platformLogo} />
               {/* Green color for phone */}
             </div>
             <h2 className={styles.platformName}>Telefonla Sipariş</h2>
@@ -30,7 +30,7 @@ export default function OrderPage() {
             </p>
             <a href="tel:+901234567890" className={styles.orderButton}>
               +90 123 456 78 90
-              <FaExternalLinkAlt size={16} />
+              <Image src="/external-link-icon.svg" alt="External Link Icon" width={16} height={16} />
             </a>
           </div>
 
@@ -55,7 +55,7 @@ export default function OrderPage() {
             </p>
             <span className={styles.orderButton}>
               Sipariş Ver
-              <FaExternalLinkAlt size={16} />
+              <Image src="/external-link-icon.svg" alt="External Link Icon" width={16} height={16} />
             </span>
           </a>
 
@@ -84,7 +84,7 @@ export default function OrderPage() {
             </p>
             <span className={styles.orderButton}>
               Sipariş Ver
-              <FaExternalLinkAlt size={16} />
+              <Image src="/external-link-icon.svg" alt="External Link Icon" width={16} height={16} />
             </span>
           </a>
         </div>
