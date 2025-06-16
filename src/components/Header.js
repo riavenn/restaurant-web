@@ -1,17 +1,17 @@
 "use client"; // For onClick event handlers
-import Image from 'next/image';
-import Link from 'next/link';
-import styles from '../app/styles/Header.module.css';
-import { useState, useEffect } from 'react';
-import { FaArrowDown } from 'react-icons/fa'; // Example arrow icon
+import Image from "next/image";
+import Link from "next/link";
+import styles from "../app/styles/Header.module.css";
+import { useState, useEffect } from "react";
+import { FaArrowDown } from "react-icons/fa"; // Example arrow icon
 
 export default function Header() {
   const [showArrow, setShowArrow] = useState(true);
 
   const scrollToFooter = () => {
-    const footerElement = document.getElementById('site-footer');
+    const footerElement = document.getElementById("site-footer");
     if (footerElement) {
-      footerElement.scrollIntoView({ behavior: 'smooth' });
+      footerElement.scrollIntoView({ behavior: "smooth" });
       setShowArrow(false); // Hide arrow after click
     }
   };
@@ -25,9 +25,9 @@ export default function Header() {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
@@ -44,9 +44,7 @@ export default function Header() {
       />
       <div className={styles.overlay}></div>
       <div className={styles.content}>
-        <h1 className={styles.title}>
-          Lezzet Durağı
-        </h1>
+        <h1 className={styles.title}>Lezzet Durağı</h1>
         <p className={styles.slogan}>
           Damaklarda İz Bırakan Tatlar, Unutulmaz Anlar...
         </p>
@@ -55,8 +53,11 @@ export default function Header() {
         </Link>
       </div>
       {showArrow && (
-        <div className={styles.scrollDownArrow} onClick={scrollToFooter} title="Aşağı Kaydır">
-          <FaArrowDown size={40} />
+        <div
+          className={styles.scrollDownArrow}
+          onClick={scrollToFooter}
+          title="Aşağı Kaydır">
+          <FaArrowDown size={30} />
         </div>
       )}
     </header>
