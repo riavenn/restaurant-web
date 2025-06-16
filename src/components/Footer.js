@@ -104,6 +104,7 @@ export default function Footer() {
         <p>
           &copy; {new Date().getFullYear()} Lezzet Durağı. Tüm Hakları Saklıdır.
         </p>
+        <p>This website was designed and developed by Mert Saykal.</p>
       </div>
     </footer>
   );
