@@ -10,13 +10,6 @@ export default function OrderPage() {
     <div className={styles.orderPage}>
       <div className="container">
         <header className={styles.pageHeader}>
-          <Image
-            src="/motorcycle-icon.svg"
-            alt="Motorcycle Icon"
-            width={80}
-            height={80}
-            className={styles.platformLogo}
-          />
           <h1 className={styles.pageTitle}>Hemen Sipariş Verin!</h1>
           <p className={styles.pageSubtitle}>
             Enfes lezzetlerimizi kapınıza kadar getirelim! Aşağıdaki kolay ve
