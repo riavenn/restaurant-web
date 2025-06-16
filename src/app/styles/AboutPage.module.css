@@ -26,8 +26,16 @@
   grid-template-columns: 1fr;
   gap: 40px;
   align-items: center;
-  border: 1px solid lightgray;
   border-radius: 8px;
+}
+
+.missionVision {
+  margin-top: 40px;
+  background-color: var(--background-light);
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  border: 1px solid lightgray;
 }
 
 .textContent {
