@@ -32,6 +32,7 @@
   padding: 30px;
   border-radius: 8px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  border: 1px solid lightgray;
 }
 
 .contactFormContainer h2 {
@@ -69,8 +70,6 @@
   resize: none; /* Not user-resizable */
 }
 
-
-
 .submitButton {
   background-color: var(--primary-color);
   color: var(--text-light);
@@ -85,8 +84,6 @@
 .submitButton:hover {
   background-color: var(--secondary-color);
 }
-
-
 
 .mapContainer {
   margin-top: 40px;

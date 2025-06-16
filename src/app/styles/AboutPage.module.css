@@ -26,6 +26,8 @@
   grid-template-columns: 1fr;
   gap: 40px;
   align-items: center;
+  border: 1px solid lightgray;
+  border-radius: 8px;
 }
 
 .textContent {
@@ -115,9 +117,12 @@
 .valuesSectionRevamped {
   margin-top: 50px;
   padding: 40px 20px;
-  background-color: var(--background-light); /* White background for this section */
+  background-color: var(
+    --background-light
+  ); /* White background for this section */
   border-radius: 8px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.07);
+  border: 1px solid lightgray;
 }
 
 .valuesSectionTitleCentered {
@@ -146,7 +151,9 @@
 
 .coreValueIconContainer {
   margin-bottom: 15px; /* Space between icon and name */
-  color: var(--secondary-color); /* Icon color, can be customized per icon if needed */
+  color: var(
+    --secondary-color
+  ); /* Icon color, can be customized per icon if needed */
 }
 
 .coreValueName {
@@ -164,7 +171,8 @@
 }
 
 /* Responsive adjustments for core values */
-@media (max-width: 992px) { /* Adjust breakpoint as needed */
+@media (max-width: 992px) {
+  /* Adjust breakpoint as needed */
   .coreValuesContainer {
     justify-content: center; /* Center items when they start to wrap */
   }
@@ -173,7 +181,8 @@
   }
 }
 
-@media (max-width: 576px) { /* Adjust breakpoint for smaller screens */
+@media (max-width: 576px) {
+  /* Adjust breakpoint for smaller screens */
   .coreValueItem {
     width: 100%; /* One item per row on small screens */
   }
