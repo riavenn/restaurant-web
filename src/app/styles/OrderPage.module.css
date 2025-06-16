@@ -1,6 +1,5 @@
 .orderPage {
   padding: 40px 20px;
-  background-color: var(--accent-color-2); /* Soft cream background */
 }
 
 .pageHeader {
@@ -17,7 +16,7 @@
 
 .pageSubtitle {
   font-size: 1.5em;
-  color: var(--secondary-color); /* Sienna */
+  color: var(--text-dark);
   margin-bottom: 30px;
 }
 
