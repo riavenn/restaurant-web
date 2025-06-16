@@ -8,7 +8,7 @@
 
 .categoryFilterButton {
   background-color: var(--secondary-color);
-  color: var(--light-text-color);
+  color: #fff;
   border: none;
   padding: 0.75rem 1.5rem;
   border-radius: var(--border-radius);
@@ -20,7 +20,9 @@
 }
 
 .categoryFilterButton:hover {
-  background-color: var(--primary-color); /* Using primary-color as hover, assuming primary-color-dark is not defined or needed here */
+  background-color: var(
+    --primary-color
+  ); /* Using primary-color as hover, assuming primary-color-dark is not defined or needed here */
   transform: translateY(-2px);
   transition: all 0.5s ease-in-out;
 }
