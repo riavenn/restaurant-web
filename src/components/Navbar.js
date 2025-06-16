@@ -34,7 +34,7 @@ export default function Navbar() {
         <div className={styles.logoContainer}>
           <Link href="/">
             <Image
-              src="/restaurant-background.jpg"
+              src="/logo.png"
               alt="Restoran Logosu"
               width={140}
               height={45}
