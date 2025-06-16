@@ -1,6 +1,7 @@
 // src/app/order/page.js
 import Link from "next/link";
 import Image from "next/image";
+import { FaExternalLinkAlt } from "react-icons/fa";
 
 import styles from "../styles/OrderPage.module.css";
 
@@ -9,7 +10,13 @@ export default function OrderPage() {
     <div className={styles.orderPage}>
       <div className="container">
         <header className={styles.pageHeader}>
-          <Image src="/motorcycle-icon.svg" alt="Motorcycle Icon" width={80} height={80} className={styles.platformLogo} />
+          <Image
+            src="/motorcycle-icon.svg"
+            alt="Motorcycle Icon"
+            width={80}
+            height={80}
+            className={styles.platformLogo}
+          />
           <h1 className={styles.pageTitle}>Hemen Sipariş Verin!</h1>
           <p className={styles.pageSubtitle}>
             Enfes lezzetlerimizi kapınıza kadar getirelim! Aşağıdaki kolay ve
@@ -21,7 +28,14 @@ export default function OrderPage() {
           {/* Telefonla Sipariş Kartı */}
           <div className={styles.platformCard}>
             <div className={styles.platformLogoContainer}>
-              <Image src="/phone-icon.svg" alt="Phone Icon" width={80} height={80} style={{ color: "#2ecc71" }} className={styles.platformLogo} />
+              <Image
+                src="/phone-icon.svg"
+                alt="Phone Icon"
+                width={80}
+                height={80}
+                style={{ color: "#2ecc71" }}
+                className={styles.platformLogo}
+              />
               {/* Green color for phone */}
             </div>
             <h2 className={styles.platformName}>Telefonla Sipariş</h2>
@@ -30,7 +44,7 @@ export default function OrderPage() {
             </p>
             <a href="tel:+901234567890" className={styles.orderButton}>
               +90 123 456 78 90
-              <Image src="/external-link-icon.svg" alt="External Link Icon" width={16} height={16} />
+              <FaExternalLinkAlt size={16} />
             </a>
           </div>
 
@@ -42,7 +56,7 @@ export default function OrderPage() {
             className={styles.platformCard}>
             <div className={styles.platformLogoContainer}>
               <Image
-                src="/yemeksepeti-logo.jpg"
+                src="/yemeksepeti-logo.svg"
                 alt="Yemeksepeti Logosu"
                 width={200}
                 height={100}
@@ -55,7 +69,7 @@ export default function OrderPage() {
             </p>
             <span className={styles.orderButton}>
               Sipariş Ver
-              <Image src="/external-link-icon.svg" alt="External Link Icon" width={16} height={16} />
+              <FaExternalLinkAlt size={16} />
             </span>
           </a>
 
@@ -67,7 +81,13 @@ export default function OrderPage() {
             className={styles.platformCard}>
             <div className={styles.platformLogoContainer}>
               {/* GetirYemek logosunu public klasörüne eklediğinizi varsayıyorum */}
-              {/* <Image src="/getiryemek-logo.png" alt="GetirYemek Logosu" width={180} height={60} className={styles.platformLogo} /> */}
+              <Image
+                src="/getiryemek-logo.svg"
+                alt="GetirYemek Logosu"
+                width={180}
+                height={60}
+                className={styles.platformLogo}
+              />
               <span
                 style={{
                   fontSize: "2em",
@@ -84,7 +104,7 @@ export default function OrderPage() {
             </p>
             <span className={styles.orderButton}>
               Sipariş Ver
-              <Image src="/external-link-icon.svg" alt="External Link Icon" width={16} height={16} />
+              <FaExternalLinkAlt size={16} />
             </span>
           </a>
         </div>
