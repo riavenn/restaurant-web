@@ -75,6 +75,14 @@
   padding: 1rem 0;
 }
 
+.mobileNavLinks ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%; /* Ensure the ul takes full width */
+  text-align: center; /* Center the text within the list */
+}
+
 .mobileNavLinks.open {
   display: flex;
 }
