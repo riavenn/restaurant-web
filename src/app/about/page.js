@@ -1,14 +1,30 @@
 // src/app/about/page.js
 import Image from "next/image";
 import styles from "../styles/AboutPage.module.css";
-import { FaStar, FaRegSmile, FaFire, FaLightbulb } from 'react-icons/fa'; // Icons for values
+import { FaStar, FaRegSmile, FaFire, FaLightbulb } from "react-icons/fa"; // Icons for values
 
 export default function AboutPage() {
   const coreValues = [
-    { name: "Kalite", Icon: FaStar, description: "Her zaman en taze ve en iyi malzemeleri kullanırız." },
-    { name: "Misafirperverlik", Icon: FaRegSmile, description: "Her misafirimizi evimizde ağırlar gibi karşılarız." },
-    { name: "Tutku", Icon: FaFire, description: "Yaptığımız işe ve sunduğumuz lezzetlere tutkuyla bağlıyız." },
-    { name: "Yenilikçilik", Icon: FaLightbulb, description: "Sürekli olarak kendimizi ve menümüzü geliştiririz." },
+    {
+      name: "Kalite",
+      Icon: FaStar,
+      description: "Her zaman en taze ve en iyi malzemeleri kullanırız.",
+    },
+    {
+      name: "Misafirperverlik",
+      Icon: FaRegSmile,
+      description: "Her misafirimizi evimizde ağırlar gibi karşılarız.",
+    },
+    {
+      name: "Tutku",
+      Icon: FaFire,
+      description: "Yaptığımız işe ve sunduğumuz lezzetlere tutkuyla bağlıyız.",
+    },
+    {
+      name: "Yenilikçilik",
+      Icon: FaLightbulb,
+      description: "Sürekli olarak kendimizi ve menümüzü geliştiririz.",
+    },
   ];
 
   return (
@@ -17,9 +33,9 @@ export default function AboutPage() {
         <header className={styles.pageHeader}>
           <h1 className={styles.pageTitle}>Hikayemiz ve Değerlerimiz</h1>
           <p className={styles.pageSubtitle}>
-            [Restoran Adınız] olarak, lezzeti sanatla buluşturduğumuz
-            mutfağımızda sizleri ağırlamaktan gurur duyuyoruz. Misyonumuz,
-            vizyonumuz ve temel değerlerimizle tanışın.
+            Lezzet Durağı olarak, lezzeti sanatla buluşturduğumuz mutfağımızda
+            sizleri ağırlamaktan gurur duyuyoruz. Misyonumuz, vizyonumuz ve
+            temel değerlerimizle tanışın.
           </p>
         </header>
 
@@ -37,7 +53,7 @@ export default function AboutPage() {
           <div className={styles.textContent}>
             <h2>Biz Kimiz?</h2>
             <p>
-              [Restoran Adınız] olarak, misafirlerimize sadece yemek değil,
+              Lezzet Durağı olarak, misafirlerimize sadece yemek değil,
               unutulmaz bir deneyim sunmayı hedefliyoruz. Yılların verdiği
               tecrübe ve mutfak tutkumuzla, en taze ve kaliteli malzemeleri
               kullanarak eşsiz lezzetler yaratıyoruz. Sıcak ve samimi
@@ -83,7 +99,9 @@ export default function AboutPage() {
 
         {/* Değerlerimiz Bölümü Revamped */}
         <section className={styles.valuesSectionRevamped}>
-          <h2 className={styles.valuesSectionTitleCentered}>Temel Değerlerimiz</h2>
+          <h2 className={styles.valuesSectionTitleCentered}>
+            Temel Değerlerimiz
+          </h2>
           <div className={styles.coreValuesContainer}>
             {coreValues.map((value) => (
               <div key={value.name} className={styles.coreValueItem}>
