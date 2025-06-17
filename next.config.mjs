@@ -7,6 +7,9 @@ const nextConfig = {
   // 'actions/configure-pages@v5' GitHub Action'ı bu ayarları otomatik olarak yönettiği için
   // 'images' ve 'basePath' / 'assetPrefix' ayarlarını buradan kaldırdık.
   // Bu, çakışmaları önler ve Action'ın otomatik yapılandırmasının sorunsuz çalışmasını sağlar.
+  images: {
+    unoptimized: true,  
+  },
 };
 
 // Next.js'in .mjs uzantılı yapılandırma dosyalarını okuyabilmesi için
